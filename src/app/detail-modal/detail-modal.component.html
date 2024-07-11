@@ -1,0 +1,230 @@
+<div
+  class="relative z-40"
+  aria-labelledby="modal-title"
+  role="dialog"
+  aria-modal="true"
+>
+  <div
+    class="fixed inset-0 bg-[#0000004D] bg-opacity-75 transition-opacity"
+    aria-hidden="true"
+  ></div>
+
+  <div class="fixed inset-0 z-10 w-screen overflow-y-auto flex justify-center">
+    <div
+      class="flex min-h-full min-w-[1282px] items-end justify-center p-4 text-center sm:items-center sm:p-0"
+    >
+      <div
+        class="relative transform overflow-hidden rounded-lg min-w-[1282px] bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+      >
+        <div class="py-8 px-12">
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-row items-center space-x-4">
+              <img
+                class="w-[90px] h-[90px] rounded-full"
+                src="https://placehold.co/90x90"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+              <div>
+                <p class="text-[#333333] text-[24px] font-[600]">
+                  {{ focusData.name }}
+                </p>
+                <p class="text-[#888888] text-[16px] font-[600]">
+                  {{ focusData.role }}
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <div
+                (click)="showEditModal()"
+                class="w-[207px] h-[40px] cursor-pointer border-[1px] border-[#6941C7] rounded-[6px] flex justify-center items-center space-x-2"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.0323 15.0209L13.6221 6.49908C13.9802 6.03953 14.1076 5.50822 13.9882 4.96724C13.8847 4.47544 13.5823 4.00783 13.1286 3.65309L12.0224 2.7743C11.0594 2.00838 9.86559 2.089 9.18114 2.96779L8.44099 3.92801C8.34548 4.04814 8.36936 4.22551 8.48874 4.32226C8.48874 4.32226 10.359 5.82185 10.3988 5.85409C10.5262 5.97503 10.6217 6.13628 10.6455 6.32977C10.6853 6.7087 10.4227 7.06344 10.0327 7.11181C9.84967 7.136 9.67458 7.07956 9.54724 6.97475L7.58145 5.41067C7.48594 5.33891 7.34269 5.35423 7.2631 5.45098L2.59135 11.4977C2.28892 11.8766 2.18546 12.3684 2.28892 12.8441L2.88582 15.4321C2.91766 15.5692 3.03704 15.6659 3.1803 15.6659L5.80666 15.6337C6.28418 15.6256 6.72987 15.4079 7.0323 15.0209ZM10.7098 14.2149H14.9923C15.4102 14.2149 15.75 14.5592 15.75 14.9825C15.75 15.4065 15.4102 15.75 14.9923 15.75H10.7098C10.2919 15.75 9.9521 15.4065 9.9521 14.9825C9.9521 14.5592 10.2919 14.2149 10.7098 14.2149Z"
+                    fill="#6941C7"
+                  />
+                </svg>
+
+                <p class="text-[#6941C7] text-[14px] font-[600]">Edit Info</p>
+              </div>
+              <div
+                class="w-[207px] h-[40px] border-[1px] border-[#6941C7] rounded-[6px] flex justify-center items-center space-x-2"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0765 1.93649C15.7014 1.55145 15.1462 1.408 14.6284 1.559L2.556 5.06964C2.00977 5.22139 1.62262 5.65702 1.51832 6.21041C1.41178 6.77363 1.78393 7.48859 2.27013 7.78756L6.04493 10.1076C6.43208 10.3454 6.93179 10.2858 7.25217 9.96265L11.5747 5.61323C11.7923 5.38673 12.1524 5.38673 12.37 5.61323C12.5876 5.83217 12.5876 6.18701 12.37 6.4135L8.03999 10.7637C7.71886 11.0861 7.65884 11.5881 7.89518 11.9777L10.2016 15.7903C10.4717 16.2433 10.9369 16.5 11.4471 16.5C11.5072 16.5 11.5747 16.5 11.6347 16.4924C12.22 16.417 12.6851 16.0168 12.8577 15.4506L16.4367 3.39359C16.5942 2.88021 16.4517 2.32153 16.0765 1.93649Z"
+                    fill="#6941C7"
+                  />
+                </svg>
+                <p class="text-[#6941C7] text-[14px] font-[600]">
+                  Send Message
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 flex flex-row justify-between">
+            <div>
+              <h4 class="text-[#333333] text-[16px] font-[700]">
+                Contact Information
+              </h4>
+              <div class="flex flex-row pt-4">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Phone Number:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  (209) 555-0104
+                </p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Alternate Phone Number:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  (209) 555-0104
+                </p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Offical Email:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  debra.holt&#64;example.com
+                </p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Secondary Email:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  jessica.hanson&#64;example.com
+                </p>
+              </div>
+
+              <h4 class="text-[#333333] text-[16px] font-[700] pt-8">
+                Personal Information
+              </h4>
+              <div class="flex flex-row pt-4">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  First Name:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Jane</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Last Name:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Cooper</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Gender:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Male</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Address:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  2972 Westheimer Rd.
+                </p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  City:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Santa Ana</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  State & Country:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">
+                  Illinois, USA
+                </p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Pincode:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">85486</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  Nationality
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">USA</p>
+              </div>
+              <div class="flex flex-row pt-2">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[230px]">
+                  NRI/Resident:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Yes</p>
+              </div>
+            </div>
+            <div class="pl-8 border-l-[1px] border-l-[#6941C733]">
+              <h4 class="text-[#333333] text-[16px] font-[700]">
+                Work Information
+              </h4>
+              <div class="flex flex-row pt-4">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[150px]">
+                  Employee ID:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">A0B1C036</p>
+              </div>
+              <div class="flex flex-row pt-4">
+                <p class="text-[#888888] text-[16px] font-[600] min-w-[150px]">
+                  Department:
+                </p>
+                <p class="text-[#333333] text-[16px] font-[600]">Sales</p>
+              </div>
+              <div class="pt-12">
+                <h4 class="text-[#333333] text-[16px] font-[700]">Image</h4>
+                <img
+                  class="pt-4 w-[580px] h-[420px]"
+                  src="assets/images/sampleimage.png"
+                  width="100%"
+                  height="100%"
+                  alt="image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="detailModalClose()"
+          class="absolute cursor-pointer top-4 right-4"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.0675 17.1832C18.1256 17.2412 18.1717 17.3102 18.2031 17.386C18.2345 17.4619 18.2507 17.5432 18.2507 17.6253C18.2507 17.7075 18.2345 17.7888 18.2031 17.8647C18.1717 17.9405 18.1256 18.0095 18.0675 18.0675C18.0095 18.1256 17.9405 18.1717 17.8647 18.2031C17.7888 18.2345 17.7075 18.2507 17.6253 18.2507C17.5432 18.2507 17.4619 18.2345 17.386 18.2031C17.3102 18.1717 17.2412 18.1256 17.1832 18.0675L12.0003 12.8839L6.81754 18.0675C6.70026 18.1848 6.5412 18.2507 6.37535 18.2507C6.2095 18.2507 6.05044 18.1848 5.93316 18.0675C5.81588 17.9503 5.75 17.7912 5.75 17.6253C5.75 17.4595 5.81588 17.3004 5.93316 17.1832L11.1168 12.0003L5.93316 6.81754C5.81588 6.70026 5.75 6.5412 5.75 6.37535C5.75 6.2095 5.81588 6.05044 5.93316 5.93316C6.05044 5.81588 6.2095 5.75 6.37535 5.75C6.5412 5.75 6.70026 5.81588 6.81754 5.93316L12.0003 11.1168L17.1832 5.93316C17.3004 5.81588 17.4595 5.75 17.6253 5.75C17.7912 5.75 17.9503 5.81588 18.0675 5.93316C18.1848 6.05044 18.2507 6.2095 18.2507 6.37535C18.2507 6.5412 18.1848 6.70026 18.0675 6.81754L12.8839 12.0003L18.0675 17.1832Z"
+              fill="#888888"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

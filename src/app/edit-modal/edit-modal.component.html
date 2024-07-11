@@ -1,0 +1,110 @@
+<div
+  class="relative z-40"
+  aria-labelledby="modal-title"
+  role="dialog"
+  aria-modal="true"
+>
+  <div
+    class="fixed inset-0 bg-[#0000004D] bg-opacity-75 transition-opacity"
+    aria-hidden="true"
+  ></div>
+
+  <div class="fixed inset-0 z-10 w-screen overflow-y-auto flex justify-center">
+    <div
+      class="flex min-h-full min-w-[641px] items-end justify-center p-4 text-center sm:items-center sm:p-0"
+    >
+      <div
+        class="relative transform overflow-hidden rounded-lg min-w-[641px] bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+      >
+        <div class="py-4 px-8">
+          <h2 class="text-[#333333] text-[24px] font-[600]">Edit</h2>
+          <div class="mt-4">
+            <form [formGroup]="editForm" (ngSubmit)="updateData()">
+              <div class="flex flex-col space-y-3">
+                <label
+                  for="inputName"
+                  class="text-[#888888] text-[14px] font-[600]"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="border-[1px] border-[#DDDDDD] rounded-[6px] h-[40px] px-4"
+                  id="inputName"
+                  name="name"
+                  formControlName="name"
+                  placeholder="Enter Name"
+                />
+
+                <div
+                  class="text-red-600 font-[600]"
+                  *ngIf="
+                    editForm.get('name').invalid &&
+                    (editForm.get('name').dirty || editForm.get('name').touched)
+                  "
+                >
+                  <div *ngIf="editForm.get('name').errors?.required">
+                    This field is required.
+                  </div>
+                  <div *ngIf="editForm.get('name').errors?.maxlength">
+                    Maximum 15 characters allowed.
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col space-y-3 mt-3">
+                <label
+                  for="inputRole"
+                  class="text-[#888888] text-[14px] font-[600]"
+                  >Designation</label
+                >
+                <select
+                  class="border-[1px] border-[#DDDDDD] rounded-[6px] h-[40px] px-4 text-[#333333] text-[16px] font-[500]"
+                  name="role"
+                  id="inputRole"
+                  formControlName="role"
+                >
+                  <option
+                    class="text-[#333333] text-[16px] font-[500]"
+                    *ngFor="let role of dropdownData"
+                    [ngValue]="role"
+                  >
+                    {{ role }}
+                  </option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                [disabled]="editForm.invalid"
+                [ngClass]="{
+                  'cursor-not-allowed': editForm.invalid == true,
+                  'cursor-pointer': editForm.invalid == false
+                }"
+                class="h-[40px] mt-6 bg-[#6941C7] w-full flex justify-center items-center rounded-[6px] text-white text-[16px] font-[500]"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          (click)="editModalClose()"
+          class="absolute cursor-pointer top-4 right-4"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.0675 17.1832C18.1256 17.2412 18.1717 17.3102 18.2031 17.386C18.2345 17.4619 18.2507 17.5432 18.2507 17.6253C18.2507 17.7075 18.2345 17.7888 18.2031 17.8647C18.1717 17.9405 18.1256 18.0095 18.0675 18.0675C18.0095 18.1256 17.9405 18.1717 17.8647 18.2031C17.7888 18.2345 17.7075 18.2507 17.6253 18.2507C17.5432 18.2507 17.4619 18.2345 17.386 18.2031C17.3102 18.1717 17.2412 18.1256 17.1832 18.0675L12.0003 12.8839L6.81754 18.0675C6.70026 18.1848 6.5412 18.2507 6.37535 18.2507C6.2095 18.2507 6.05044 18.1848 5.93316 18.0675C5.81588 17.9503 5.75 17.7912 5.75 17.6253C5.75 17.4595 5.81588 17.3004 5.93316 17.1832L11.1168 12.0003L5.93316 6.81754C5.81588 6.70026 5.75 6.5412 5.75 6.37535C5.75 6.2095 5.81588 6.05044 5.93316 5.93316C6.05044 5.81588 6.2095 5.75 6.37535 5.75C6.5412 5.75 6.70026 5.81588 6.81754 5.93316L12.0003 11.1168L17.1832 5.93316C17.3004 5.81588 17.4595 5.75 17.6253 5.75C17.7912 5.75 17.9503 5.81588 18.0675 5.93316C18.1848 6.05044 18.2507 6.2095 18.2507 6.37535C18.2507 6.5412 18.1848 6.70026 18.0675 6.81754L12.8839 12.0003L18.0675 17.1832Z"
+              fill="#888888"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Cooper",
+    "role": "Project Manager"
+  },
+  {
+    "id": 2,
+    "name": "Bessie Cooper",
+    "role": "Content Writer"
+  },
+  {
+    "id": 3,
+    "name": "Jenny Wilson",
+    "role": "System Analyst"
+  },
+  {
+    "id": 4,
+    "name": "Wade Warren",
+    "role": "Delivery Manager"
+  },
+  {
+    "id": 5,
+    "name": "Arlene McCoy",
+    "role": "Chief Marketing Officer"
+  },
+  {
+    "id": 6,
+    "name": "Marvin McKinney",
+    "role": "HR"
+  }
+]

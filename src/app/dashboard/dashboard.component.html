@@ -1,0 +1,248 @@
+<div class="max-w-[1440px] relative top-[81px] mx-auto 2xl:px-0 px-4">
+  <div class="flex flex-row items-center space-x-2 h-[40px] mt-8">
+    <h4 class="w-[74px] text-[14px] font-[600] text-[#333333]">Employees</h4>
+    <p class="border-b-[2px] border-b-[#EEEEEE] w-full"></p>
+    <a href="">
+      <div
+        class="bg-[#6941C7] rounded-[6px] w-[170px] h-[40px] flex flex-row justify-center items-center space-x-2"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.91663 10.4614C10.2121 10.4614 12.0522 8.59752 12.0522 6.27235C12.0522 3.94717 10.2121 2.08331 7.91663 2.08331C5.62115 2.08331 3.7811 3.94717 3.7811 6.27235C3.7811 8.59752 5.62115 10.4614 7.91663 10.4614ZM7.91663 12.5126C4.54515 12.5126 1.66663 13.0517 1.66663 15.2053C1.66663 17.3582 4.52763 17.9166 7.91663 17.9166C11.2873 17.9166 14.1666 17.3776 14.1666 15.2239C14.1666 13.0703 11.3056 12.5126 7.91663 12.5126ZM16.5816 7.98987H17.5841C17.9968 7.98987 18.3333 8.33107 18.3333 8.74955C18.3333 9.16802 17.9968 9.50923 17.5841 9.50923H16.5816V10.4903C16.5816 10.9088 16.246 11.25 15.8324 11.25C15.4198 11.25 15.0833 10.9088 15.0833 10.4903V9.50923H14.0824C13.6689 9.50923 13.3333 9.16802 13.3333 8.74955C13.3333 8.33107 13.6689 7.98987 14.0824 7.98987H15.0833V7.00966C15.0833 6.59119 15.4198 6.24998 15.8324 6.24998C16.246 6.24998 16.5816 6.59119 16.5816 7.00966V7.98987Z"
+            fill="white"
+          />
+        </svg>
+
+        <p class="text-white text-[14px] font-[600]">Add Employee</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="text-[#888888] text-[24px] font-[600]">Employee Directory</h3>
+    <div class="mt-4 flex flex-row justify-between">
+      <div class="flex flex-row items-center space-x-1">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11.7666"
+            cy="11.7666"
+            r="8.98856"
+            stroke="#888888"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18.0183 18.4851L21.5423 22"
+            stroke="#888888"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <input
+          class="placeholder:text-[#888888] placeholder:text-[14px] placeholder:font-[500] px-2"
+          type="text"
+          placeholder="Filter by Name"
+        />
+      </div>
+      <div class="flex flex-row items-center space-x-1">
+        <p class="text-[#888888] text-[14px] font-[600]">Sort by:</p>
+        <div
+          class="flex flex-row justify-center items-center space-x-2 w-[193px] h-[40px] border-[2px] border-[#EEEEEE] rounded-[6px]"
+        >
+          <p class="text-[#333333] text-[14px] font-[600]">Alphabetical A-Z</p>
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.25 6.375L9 11.625L3.75 6.375"
+              stroke="#888888"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table Here -->
+  <!-- component -->
+  <div class="overflow-x-auto">
+    <div class="flex items-center justify-center">
+      <div class="w-full">
+        <div class="bg-white rounded my-6">
+          <table class="min-w-max w-full table-auto">
+            <thead class="border-b-[1px] border-b-[#333333] h-[40px]">
+              <tr class="text-[#888888] text-[16px] font-[600]">
+                <th class="text-[#333333] text-left">
+                  <div class="flex flex-row space-x-1 items-center">
+                    <p>Name</p>
+                    <svg
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.5655 3.68461C6.5945 3.71286 6.7185 3.81953 6.8205 3.9189C7.462 4.50146 8.512 6.02119 8.8325 6.81661C8.884 6.93741 8.993 7.24282 9 7.40599C9 7.56235 8.964 7.7114 8.891 7.85363C8.789 8.03093 8.6285 8.17316 8.439 8.2511C8.3075 8.30127 7.914 8.3792 7.907 8.3792C7.4765 8.45714 6.777 8.5 6.004 8.5C5.2675 8.5 4.5965 8.45714 4.1595 8.39333C4.1525 8.38602 3.6635 8.30809 3.496 8.22284C3.19 8.06649 3 7.76108 3 7.43424L3 7.40599C3.0075 7.19313 3.1975 6.74549 3.2045 6.74549C3.5255 5.99294 4.524 4.50828 5.1875 3.91159C5.1875 3.91159 5.358 3.74355 5.4645 3.67048C5.6175 3.5565 5.807 3.5 5.9965 3.5C6.208 3.5 6.405 3.56381 6.5655 3.68461Z"
+                        fill="#333333"
+                      />
+                      <path
+                        d="M5.4345 16.3154C5.4055 16.2871 5.2815 16.1805 5.1795 16.0811C4.538 15.4985 3.488 13.9788 3.1675 13.1834C3.116 13.0626 3.007 12.7572 3 12.594C3 12.4377 3.036 12.2886 3.109 12.1464C3.211 11.9691 3.3715 11.8268 3.561 11.7489C3.6925 11.6987 4.086 11.6208 4.093 11.6208C4.5235 11.5429 5.223 11.5 5.996 11.5C6.7325 11.5 7.4035 11.5429 7.8405 11.6067C7.8475 11.614 8.3365 11.6919 8.504 11.7772C8.81 11.9335 9 12.2389 9 12.5658V12.594C8.9925 12.8069 8.8025 13.2545 8.7955 13.2545C8.4745 14.0071 7.476 15.4917 6.8125 16.0884C6.8125 16.0884 6.642 16.2565 6.5355 16.3295C6.3825 16.4435 6.193 16.5 6.0035 16.5C5.792 16.5 5.595 16.4362 5.4345 16.3154Z"
+                        fill="#333333"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th class="text-left">Employee Id</th>
+                <th class="text-left">
+                  <div class="flex flex-row space-x-1 items-center">
+                    <p>Department</p>
+                    <svg
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.5655 3.68461C6.5945 3.71286 6.7185 3.81953 6.8205 3.9189C7.462 4.50146 8.512 6.02119 8.8325 6.81661C8.884 6.93741 8.993 7.24282 9 7.40599C9 7.56235 8.964 7.7114 8.891 7.85363C8.789 8.03093 8.6285 8.17316 8.439 8.2511C8.3075 8.30127 7.914 8.3792 7.907 8.3792C7.4765 8.45714 6.777 8.5 6.004 8.5C5.2675 8.5 4.5965 8.45714 4.1595 8.39333C4.1525 8.38602 3.6635 8.30809 3.496 8.22284C3.19 8.06649 3 7.76108 3 7.43424L3 7.40599C3.0075 7.19313 3.1975 6.74549 3.2045 6.74549C3.5255 5.99294 4.524 4.50828 5.1875 3.91159C5.1875 3.91159 5.358 3.74355 5.4645 3.67048C5.6175 3.5565 5.807 3.5 5.9965 3.5C6.208 3.5 6.405 3.56381 6.5655 3.68461Z"
+                        fill="#333333"
+                      />
+                      <path
+                        d="M5.4345 16.3154C5.4055 16.2871 5.2815 16.1805 5.1795 16.0811C4.538 15.4985 3.488 13.9788 3.1675 13.1834C3.116 13.0626 3.007 12.7572 3 12.594C3 12.4377 3.036 12.2886 3.109 12.1464C3.211 11.9691 3.3715 11.8268 3.561 11.7489C3.6925 11.6987 4.086 11.6208 4.093 11.6208C4.5235 11.5429 5.223 11.5 5.996 11.5C6.7325 11.5 7.4035 11.5429 7.8405 11.6067C7.8475 11.614 8.3365 11.6919 8.504 11.7772C8.81 11.9335 9 12.2389 9 12.5658V12.594C8.9925 12.8069 8.8025 13.2545 8.7955 13.2545C8.4745 14.0071 7.476 15.4917 6.8125 16.0884C6.8125 16.0884 6.642 16.2565 6.5355 16.3295C6.3825 16.4435 6.193 16.5 6.0035 16.5C5.792 16.5 5.595 16.4362 5.4345 16.3154Z"
+                        fill="#333333"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th class="text-left">Phone Number</th>
+                <th class="text-left">
+                  <div class="flex flex-row space-x-1 items-center">
+                    <p>City</p>
+                    <svg
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.5655 3.68461C6.5945 3.71286 6.7185 3.81953 6.8205 3.9189C7.462 4.50146 8.512 6.02119 8.8325 6.81661C8.884 6.93741 8.993 7.24282 9 7.40599C9 7.56235 8.964 7.7114 8.891 7.85363C8.789 8.03093 8.6285 8.17316 8.439 8.2511C8.3075 8.30127 7.914 8.3792 7.907 8.3792C7.4765 8.45714 6.777 8.5 6.004 8.5C5.2675 8.5 4.5965 8.45714 4.1595 8.39333C4.1525 8.38602 3.6635 8.30809 3.496 8.22284C3.19 8.06649 3 7.76108 3 7.43424L3 7.40599C3.0075 7.19313 3.1975 6.74549 3.2045 6.74549C3.5255 5.99294 4.524 4.50828 5.1875 3.91159C5.1875 3.91159 5.358 3.74355 5.4645 3.67048C5.6175 3.5565 5.807 3.5 5.9965 3.5C6.208 3.5 6.405 3.56381 6.5655 3.68461Z"
+                        fill="#333333"
+                      />
+                      <path
+                        d="M5.4345 16.3154C5.4055 16.2871 5.2815 16.1805 5.1795 16.0811C4.538 15.4985 3.488 13.9788 3.1675 13.1834C3.116 13.0626 3.007 12.7572 3 12.594C3 12.4377 3.036 12.2886 3.109 12.1464C3.211 11.9691 3.3715 11.8268 3.561 11.7489C3.6925 11.6987 4.086 11.6208 4.093 11.6208C4.5235 11.5429 5.223 11.5 5.996 11.5C6.7325 11.5 7.4035 11.5429 7.8405 11.6067C7.8475 11.614 8.3365 11.6919 8.504 11.7772C8.81 11.9335 9 12.2389 9 12.5658V12.594C8.9925 12.8069 8.8025 13.2545 8.7955 13.2545C8.4745 14.0071 7.476 15.4917 6.8125 16.0884C6.8125 16.0884 6.642 16.2565 6.5355 16.3295C6.3825 16.4435 6.193 16.5 6.0035 16.5C5.792 16.5 5.595 16.4362 5.4345 16.3154Z"
+                        fill="#333333"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th class="text-left">Email</th>
+                <th class="text-left"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let item of data"
+                (click)="showDetail(item)"
+                class="hover:bg-[#F9F7FF] cursor-pointer first:border-t-0 border-t-[1px] h-[80px]"
+              >
+                <td>
+                  <div class="flex flex-row space-x-2">
+                    <img
+                      class="w-[48px] h-[48px] rounded-full"
+                      src="https://placehold.co/48x48"
+                      width="100%"
+                      height="100%"
+                      alt=""
+                    />
+                    <div>
+                      <p class="text-[#333333] text-[16px] font-[600]">
+                        {{ item.name }}
+                      </p>
+                      <p class="text-[#888888] text-[14px] font-[600]">
+                        {{ item.role }}
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <p class="text-[#333333] text-[16px] font-[600]">A0B1C036</p>
+                </td>
+                <td>
+                  <p class="text-[#333333] text-[16px] font-[600]">Sales</p>
+                </td>
+                <td>
+                  <p class="text-[#333333] text-[16px] font-[600]">
+                    (209) 555-0104
+                  </p>
+                </td>
+                <td>
+                  <p class="text-[#333333] text-[16px] font-[600]">Austin</p>
+                </td>
+                <td>
+                  <p class="text-[#333333] text-[16px] font-[600]">
+                    debra.holt&#64;example.com
+                  </p>
+                </td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                      fill="#888888"
+                    />
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="detailModal">
+  <app-detail-modal
+    [focusData]="selectedData"
+    (detailModalClosed)="detailModalToggle()"
+    (editData)="showEditModal($event)"
+  ></app-detail-modal>
+</div>
+
+<div *ngIf="editModal">
+  <app-edit-modal
+    [focusData]="selectedData"
+    (editModalClosed)="editModalToggle()"
+    (updatedData)="updatedAll($event)"
+  ></app-edit-modal>
+</div>
